@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "472763261444",
+    "project_id": "real-time-network-monitoring",
+    "storage_bucket": "real-time-network-monitoring.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472763261444:android:47e62010dc360e10f1cb51",
+        "android_client_info": {
+          "package_name": "com.example.real_time_net_monitoring_sys"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkQfAHfKBNesKWPYXIL_PiL_uF9n5NcTY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
