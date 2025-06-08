@@ -37,8 +37,7 @@ const Size desktopDesignSize = Size(1440, 1024);
 
 class ResponsiveScreenUtilInit extends StatelessWidget {
   final Widget child;
-  const ResponsiveScreenUtilInit({Key? key, required this.child})
-      : super(key: key);
+  const ResponsiveScreenUtilInit({super.key, required this.child});
 
   Size _getDesignSize(double width) {
     if (width < 600) {
