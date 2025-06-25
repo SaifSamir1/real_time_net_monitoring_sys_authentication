@@ -118,7 +118,6 @@ class SignUpAuthForm extends StatelessWidget {
                     ),
                   ),
                   FadeInRight(
-
                     duration: const Duration(milliseconds: 600),
                     delay: const Duration(milliseconds: 300),
                     child: AuthTextField(

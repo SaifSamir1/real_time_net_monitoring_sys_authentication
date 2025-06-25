@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:real_time_net_monitoring_sys/features/auth/data/repositories/auth_repository_impl.dart';
 import 'package:real_time_net_monitoring_sys/features/auth/ui/screens/login_screen.dart';
 import 'package:real_time_net_monitoring_sys/features/auth/ui/screens/signup_screen.dart';
+import 'package:real_time_net_monitoring_sys/features/home/ui/home_screen.dart';
 import 'package:real_time_net_monitoring_sys/features/intro_screen/ui/intro_screen.dart';
 import '../../features/auth/cubit/login/login_cubit.dart';
 import '../../features/auth/cubit/signup/signup_cubit.dart';
@@ -38,9 +39,9 @@ abstract class AppRouter {
         },
       ),
       GoRoute(
-        path: Routes.webIntroScreen,
+        path: Routes.homeView,
         pageBuilder: (context, state) {
-          return fadeTransitionPage(const IntroScreen());
+          return fadeTransitionPage(const HomeScreen());
         },
       ),
     ],
