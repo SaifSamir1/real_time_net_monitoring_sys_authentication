@@ -4,7 +4,8 @@ import '../../../../core/styles/app_colors.dart';
 import 'package:animate_do/animate_do.dart';
 
 class HomeNavBar extends StatelessWidget {
-  const HomeNavBar({super.key});
+  final void Function(String section)? onNavTap;
+  const HomeNavBar({super.key, this.onNavTap});
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +18,11 @@ class HomeNavBar extends StatelessWidget {
             // Logo
             Row(
               children: [
-                Image.asset('assets/images/app_logo.png', height: 40.h),
                 SizedBox(width: 12.w),
                 Text(
                   'Luminu',
                   style: TextStyle(
-                    color: AppColors.primaryBlue,
+                    color: AppColors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 34.sp, // Bigger size
                     letterSpacing: 2,
@@ -35,29 +35,18 @@ class HomeNavBar extends StatelessWidget {
             if (MediaQuery.of(context).size.width > 800)
               Row(
                 children: [
-                  _NavLink(
-                    title: 'Home',
-                    onTap: () {
-                      /* TODO: Scroll to Home */
-                    },
-                  ),
+                  _NavLink(title: 'Home', onTap: () => onNavTap?.call('Home')),
                   _NavLink(
                     title: 'About',
-                    onTap: () {
-                      /* TODO: Scroll to About */
-                    },
+                    onTap: () => onNavTap?.call('About'),
                   ),
                   _NavLink(
                     title: 'Why Luminu',
-                    onTap: () {
-                      /* TODO: Scroll to Why Luminu */
-                    },
+                    onTap: () => onNavTap?.call('Why Luminu'),
                   ),
                   _NavLink(
                     title: 'Features',
-                    onTap: () {
-                      /* TODO: Scroll to Features */
-                    },
+                    onTap: () => onNavTap?.call('Features'),
                   ),
                   SizedBox(width: 16.w),
                   ElevatedButton(
@@ -68,11 +57,12 @@ class HomeNavBar extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      /* TODO: Get Started action */
+                      // TODO: Get Started action
                     },
                     child: Text(
                       'Get Started',
                       style: TextStyle(
+                        color: AppColors.white,
                         fontSize: 16.sp,
                         fontWeight: FontWeight.bold,
                       ),
@@ -84,7 +74,7 @@ class HomeNavBar extends StatelessWidget {
             if (MediaQuery.of(context).size.width <= 800)
               IconButton(
                 icon: const Icon(Icons.menu),
-                color: AppColors.primaryBlue,
+                color: AppColors.white,
                 onPressed: () {
                   // TODO: Open Drawer or show modal
                 },
@@ -113,7 +103,7 @@ class _NavLink extends StatelessWidget {
           child: Text(
             title,
             style: TextStyle(
-              color: AppColors.primaryBlue,
+              color: AppColors.white,
               fontWeight: FontWeight.w600,
               fontSize: 16.sp,
             ),
